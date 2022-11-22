@@ -1,0 +1,47 @@
+---
+title: "Model Details"
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+#| label: read-data
+
+library(tidyverse)
+dat <- read_csv("data/final_data.csv")
+```
+
+
+<!-- Fill in the model below replacing `student_faculty_ratio` with your variable of interest along with the variables in your "adjustment set". Put your variable of interest first in the equation. -->
+
+```{r}
+#| label: final-model
+
+model <- lm(retention_rate ~ student_faculty_ratio, data = dat)
+summary(model)
+```
+
+The coefficient for ______INSERT THE NAME OF THE VARIABLE OF INTEREST HERE_____ is `r round(coef(model)[2],2)` (95% CI: `r round(confint(model)[2, 1],2)`, `r round(confint(model)[2, 2],2)`). This means that _________.
+
+Let's predict a specific change for a school like Wake Forest.
+
+
+```{r}
+#| label: predict-wake
+#| eval: false
+wake_forest <- dat[dat$name == "Wake Forest University",]
+
+wake_forest_a <- wake_forest_b <- wake_forest
+
+wake_forest_a$(insert your variable of interest) <- #Low value
+wake_forest_b$(insert your variable of interest) <- #High value
+
+a <- predict(model, newdata = wake_forest_a)
+b <- predict(model, newdata = wake_forest_b)
+
+b - a
+```
+
+Interpret the above result

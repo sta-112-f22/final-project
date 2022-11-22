@@ -1,0 +1,52 @@
+variable,label
+unitid,ID
+name,Institution name
+year,Year
+state,State
+sector,Sector of institution
+degree_status,Degree-granting status
+institution_cat,Institutional category
+size_cat,Institution size category
+n_firstyear_enrolled,Full time first-time degree/certificate-seeking undergraduate students enrolled
+zipcode,ZIP code
+longitude,Longitude location of institution
+latitude,Latitude location of institution
+carneigie_cat,Carnegie Classification 2018: Basic
+religious_affiliation,Religious affiliation
+total_price_local,Total price for in-district students living on campus  2018-19
+total_price_instate,Total price for in-state students living on campus 2018-19
+total_price_outofstate,Total price for out-of-state students living on campus 2018-19
+disabilities_percent,Percent indicator of undergraduates formally registered as students with disabilities
+total_enrollment,Undergraduate enrollment
+percent_asian,Percent of undergraduate enrollment that are Asian
+percent_black_or_african_american,Percent of undergraduate enrollment that are Black or African American
+percent_hispanic,Percent of undergraduate enrollment that are Hispanic/Latino
+percent_white,Percent of undergraduate enrollment that are White
+percent_women,Percent of undergraduate enrollment that are women
+percent_all_distance,Percent of undergraduate students enrolled exclusively in distance education courses
+percent_some_distance,Percent of undergraduate students enrolled in some but not all distance education courses
+student_faculty_ratio,Student-to-faculty ratio
+average_instructor_salary,Average salary equated to 9 months of full-time instructional staff - all ranks
+percent_finanical_aid,"Percent of undergraduate students awarded federal, state, local, institutional or other sources of grant aid"
+percent_pell_grant,Percent of undergraduate students awarded Pell grants
+graduation_rate,"Graduation rate, total cohort"
+require_test_score,Admission test scores
+total_applicants,Applicants total
+total_men_applicants,Applicants men
+total_women_applicants,Applicants women
+total_admitted,Admissions total
+total_men_admitted,Admissions men
+total_women_admitted,Admissions women
+total_enrolled,Enrolled total
+total_men_enrolled,Enrolled  men
+total_women_enrolled,Enrolled  women
+percent_admitted,Percent admitted - total
+student_service_expenses,Student service expenses per FTE
+endowment_assets,Endowment assets (year end) per FTE enrollment
+major_education,Total Education Majors
+major_engineering,Total Engineering Majors
+major_biological_sciences,Total Biological Sciences Majors
+major_mathematics,Total Mathematics Majors
+major_physical_sciences,Total Physical Sciences Majors
+major_business,Total Business Majors
+retention_rate,"Full-time retention rate, 2019"

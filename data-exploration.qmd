@@ -1,0 +1,85 @@
+---
+title: "Data Exploration"
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+The data were obtained from IPEDS. We include 4 year public or not-for-profit private institutions in the United States that are degree-granting, primarily baccalaureate or above with between 1,000-9,999 students.
+
+```{r}
+#| label: read-data
+library(tidyverse)
+dat <- read_csv("data/final_data.csv")
+```
+
+<!-- Describe the data below here. How many observations are there? How many variables? What are the observations? -->
+
+Our variable of interest is _______, measured in the 2018-2019 cohort. Our outcome of interest is first-year retention rate, measured in 2019-2020 (i.e. what proportion of the first year cohort that began in 2018-2019 returned in Fall 2019). Below is a plot visualizing the relationship between these variables, before adjusting for potential confounders.
+
+```{r}
+#| label: figure-1
+
+## Insert your plot code here.
+```
+
+<!-- Describe what you see in the plot here. -->
+
+Below is a table of the collected variables.
+
+<!-- Move your variable of interest to the top of the list below. -->
+
+```{r}
+#| label: table-one
+
+library(gtsummary)
+
+tbl_summary(dat, include = c(
+  "retention_rate",    
+  "degree_status",
+  "institution_cat",
+  "size_cat",
+  "n_firstyear_enrolled",
+  "carneigie_cat",
+  "religious_affiliation",
+  "total_price_local",
+  "total_price_instate",
+  "total_price_outofstate",
+  "disabilities_percent",
+  "total_enrollment",
+  "percent_asian",
+  "percent_black_or_african_american",
+  "percent_hispanic",
+  "percent_white",
+  "percent_women",
+  "percent_all_distance",
+  "percent_some_distance",
+  "student_faculty_ratio",
+  "average_instructor_salary",
+  "percent_finanical_aid",
+  "percent_pell_grant",
+  "graduation_rate",
+  "require_test_score",
+  "total_applicants",
+  "total_men_applicants",
+  "total_men_applicants",             
+  "total_women_applicants",           
+  "total_admitted",                   
+  "total_men_admitted",               
+  "total_women_admitted",             
+  "total_enrolled",                   
+  "total_men_enrolled",               
+  "total_women_enrolled",             
+  "percent_admitted",                 
+  "student_service_expenses",         
+  "endowment_assets",                 
+  "major_education",                  
+  "major_engineering",                
+  "major_biological_sciences",        
+  "major_mathematics",                
+  "major_physical_sciences",          
+  "major_business"                  
+))
+```
+

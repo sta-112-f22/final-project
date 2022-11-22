@@ -1,0 +1,54 @@
+---
+title: "Causal Assumptions"
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+<!-- Update the code below. After you have updated it, set `eval: true` in the chunk options. -->
+
+```{r}
+#| label: dag
+#| eval: false
+library(ggdag)
+
+dag <- dagify(
+  # add your equations here
+  # separate your equations using a comma between them
+  exposure = "add the name of your variable of interest here",
+  outcome = "retention_rate",
+  labels = labels
+)
+```
+
+```{r}
+#| label: ggdag
+#| eval: false
+
+source("ggdag-theme.R")
+
+dag %>%
+  tidy_dagitty() %>%
+  node_status() %>%
+  ggplot(
+    aes(x, y, xend = xend, yend = yend, color = status)
+  ) +
+  geom_dag_edges() +
+  geom_dag_point() +
+  geom_dag_label_repel() +
+  scale_color_okabe_ito(na.value = "grey90") +
+  theme_dag() +
+  theme(legend.position = "none") +
+  coord_cartesian(clip = "off")
+```
+
+```{r}
+#| label: adjustment_set
+#| eval: false
+
+dag %>%
+  ggdag_adjustment_set()
+```
+
+
