@@ -1,0 +1,6 @@
+---
+title: "STA 112 Final Project"
+author: "Lucy D'Agostino McGowan"
+---
+
+
