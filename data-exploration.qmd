@@ -38,6 +38,7 @@ library(gtsummary)
 tbl_summary(dat, include = c(
   "retention_rate",    
   "degree_status",
+  "sector",
   "institution_cat",
   "size_cat",
   "n_firstyear_enrolled",

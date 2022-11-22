@@ -1,5 +1,4 @@
-library(ggplot2)
-library(ggokabeito)
+
 options(
   # set default colors in ggplot2 to colorblind-friendly 
   # Okabe-Ito and Viridis palettes

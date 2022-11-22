@@ -12,6 +12,9 @@ execute:
 #| label: dag
 #| eval: false
 library(ggdag)
+library(ggplot2)
+library(ggokabeito)
+source("ggdag-theme.R")
 
 dag <- dagify(
   # add your equations here
@@ -25,8 +28,6 @@ dag <- dagify(
 ```{r}
 #| label: ggdag
 #| eval: false
-
-source("ggdag-theme.R")
 
 dag %>%
   tidy_dagitty() %>%
