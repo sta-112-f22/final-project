@@ -10,6 +10,8 @@ website:
       - data-exploration.qmd
       - causal-assumptions.qmd
       - final-model.qmd
+      - sensitivity-data.qmd
+      - citation.qmd
 
 format:
   html:

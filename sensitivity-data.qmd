@@ -1,0 +1,53 @@
+---
+title: "Sensitivity Analyses"
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+
+## Athletics Data
+
+```{r}
+library(tidyverse)
+athletics_dat <- read_csv("data/basketball_data_2018.csv")
+```
+
+Our original dataset did not have data on athletics rankings. As a sensitivity analysis, we have obtained data that includes the "Power Rating" (chance of beating an average Division I team) in 2018 for a subset of schools. Below are the results of our model, adding in this variable.
+
+<!-- Fill in the sentence below with the number of observations in the athletics_dat dataset. -->
+
+This data set includes information on XX schools.
+
+<!-- Add in your model in the ... and set `eval: true` -->
+
+```{r}
+#| eval: false
+lm(retention_rate ~ ... + bball_power_rating, data = athletics_dat)
+```
+
+<!-- Add an explanation of what you see. Does adding this variable change your findings from your final model? -->
+
+## USNews Ranking Data
+
+```{r}
+usnews_dat <- read_csv("data/usnews_data_2018.csv")
+```
+
+Our original dataset did not have data on USNews rankings. As a sensitivity analysis, we have obtained rankings from 2018. Below are the results of our model, adding in this variable.
+
+<!-- Fill in the sentence below with the number of observations in the usnews_dat dataset. -->
+
+This data set includes information on XX schools.
+
+<!-- Add in your model in the ... and set `eval: true` -->
+
+```{r}
+#| eval: false
+lm(retention_rate ~ ... + usnews_ranking, data = usnews_dat)
+```
+
+<!-- Add an explanation of what you see. Does adding this variable change your findings from your final model? -->
+
+
